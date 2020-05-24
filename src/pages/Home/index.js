@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Header from '../../components/Header';
 import Card from '../../components/Card';
 
 export default function Home() {
   return (
     <>
+      <Header />
       <div className="container">
         <div className="row">
           <div className="col-md-8 mb-5">
