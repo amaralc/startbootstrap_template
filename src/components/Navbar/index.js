@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import NavItem from './NavItem';
 
 export default function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div className="container">
-          <a className="navbar-brand" href="/">
-            peerLab
-          </a>
+          <Link className="navbar-brand" to="/">
+            Start Bootstrap
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -21,27 +24,10 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="/">
-                  Home
-                  <span className="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Contact
-                </a>
-              </li>
+              <NavItem item="Home" route="/" />
+              <NavItem item="About" route="/" />
+              <NavItem item="Services" route="/" />
+              <NavItem item="Contact" route="/" />
             </ul>
           </div>
         </div>
